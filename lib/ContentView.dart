@@ -2,14 +2,14 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class ContentView extends StatefulWidget {
-  Color contentBackColor;
+  Color contentBackgroundColor;
   String imageUrl;
   String title;
   String subTitle;
 
   ContentView(
       {super.key,
-      required this.contentBackColor,
+      required this.contentBackgroundColor,
       required this.imageUrl,
       required this.title,
       required this.subTitle});
@@ -22,7 +22,7 @@ class _ContentViewState extends State<ContentView> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: widget.contentBackColor,
+      backgroundColor: widget.contentBackgroundColor,
       body: Stack(
         children: [
           Positioned(
@@ -45,10 +45,12 @@ class _ContentViewState extends State<ContentView> {
                 Text(
                   widget.title,
                   style: const TextStyle(
-                      fontSize: 35.0,
-                      fontWeight: FontWeight.bold,
-                      color: Colors.white),
+                    fontSize: 35.0,
+                    fontWeight: FontWeight.bold,
+                    color: Colors.white
+                  ),
                 ),
+
                 Padding(
                   padding: const EdgeInsets.all(15.0),
                   child: Text(
@@ -56,7 +58,8 @@ class _ContentViewState extends State<ContentView> {
                     style: const TextStyle(
                         fontSize: 18.0,
                         fontWeight: FontWeight.normal,
-                        color: Colors.white),
+                        color: Colors.white
+                    ),
                   ),
                 ),
               ],
